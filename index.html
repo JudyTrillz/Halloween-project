@@ -16,43 +16,547 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-
-    <!--=============== CSS ===============-->
+    <!--!=============== CSS ===============-->
+    <!--=============== MAIN CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!--=============== AOS CSS ===============-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <title>Responsive halloween website</title>
   </head>
   <body>
+    <img
+      src="./assets/img/shape-bg.png"
+      alt="bg shape"
+      class="shape__bg"
+      width="1920"
+      height="1080"
+    />
     <!--==================== HEADER ====================-->
-    <header class="header" id="header"></header>
+    <header class="header" id="header" aria-label="header">
+      <nav class="nav container" aria-label="main navigation">
+        <a href="#" class="nav__logo">
+          <img
+            src="./assets/img/logo-skull.png"
+            width="133"
+            height="169"
+            alt="main logo"
+          />
+
+          Halloween
+        </a>
+
+        <!--============= Header navigation =============-->
+        <div class="nav__menu" aria-label="navigation menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About Us</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#items" class="nav__link">Items</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#party" class="nav__link">Party</a>
+            </li>
+          </ul>
+
+          <!--============= Close menu icon =============-->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+
+          <img
+            src="./assets/img/nav-bat.png"
+            width="400"
+            height="194"
+            alt="nav image"
+            class="nav__image"
+          />
+        </div>
+
+        <!--============= Open menu icon =============-->
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-5-line"></i>
+        </div>
+      </nav>
+    </header>
 
     <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== HOME ====================-->
-      <section class="home section" id="home"></section>
+      <section class="home section" id="home" aria-label="home page">
+        <div class="shape__small"></div>
+        <div class="shape__big"></div>
+
+        <div class="home__container container grid">
+          <div class="home__data" data-aos="fade-down" data-aos-duration="2000">
+            <h1 class="home__title">
+              <span>Halloween</span> Trick Or Treat!!!
+              <img
+                src="./assets/img/stars.png"
+                alt="home stars"
+                class="home__title-img-1"
+                width="250"
+                height="256"
+              />
+              <img
+                src="./assets/img/stars.png"
+                alt="home stars"
+                class="home__title-img-2"
+                width="250"
+                height="256"
+              />
+            </h1>
+
+            <p class="home__description">
+              This Halloween, enjoy trick-or-treating with your friends and
+              spend a terrifying night under the full moon.
+            </p>
+
+            <a href="#" class="button">Explore Now!!!</a>
+          </div>
+          <img
+            src="./assets/img/home-pumpkin.png"
+            alt="home banner"
+            class="home__banner"
+            width="1000"
+            height="682"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          />
+
+          <img
+            src="./assets/img/home-tree1.png"
+            alt="home tree"
+            class="home__tree-1"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          />
+          <img
+            src="./assets/img/home-tree2.png"
+            alt="home tree"
+            class="home__tree-2"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+          />
+        </div>
+      </section>
 
       <!--==================== CATEGORY ====================-->
-      <section class="category section"></section>
+      <section class="category section">
+        <div class="shape__small"></div>
+        <h2
+          class="section__title"
+          data-aos="fade-up-right"
+          data-aos-duration="2000"
+        >
+          Choose your <br />
+          spooky category
+        </h2>
+
+        <div
+          class="category__container container grid"
+          data-aos="fade-up-left"
+          data-aos-duration="2500"
+          data-aos-delay="800"
+        >
+          <div class="category__card">
+            <img
+              src="./assets/img/category-pumpkin.png"
+              alt="category image"
+              class="category__img"
+              width="360"
+              height="318"
+              loading="lazy"
+            />
+
+            <h3 class="category__title">Pumpkins</h3>
+
+            <p class="category__description">
+              Light up horror pumpkins to scare at night
+            </p>
+
+            <img
+              src="./assets/img/stars.png"
+              alt="category start image"
+              class="category__star"
+              width="250"
+              height="256"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="category__card">
+            <img
+              src="./assets/img/category-ghost.png"
+              alt="category image"
+              class="category__img"
+              width="360"
+              height="360"
+              loading="lazy"
+            />
+
+            <h3 class="category__title">Ghost</h3>
+
+            <p class="category__description">
+              Spooky ghosts to scare in the most haunted houses
+            </p>
+
+            <img
+              src="./assets/img/stars.png"
+              alt="category start image"
+              class="category__star"
+              width="250"
+              height="256"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="category__card">
+            <img
+              src="./assets/img/category-pumpkin.png"
+              alt="category image"
+              class="category__img"
+              width="360"
+              height="318"
+              loading="lazy"
+            />
+
+            <h3 class="category__title">Witch Hat</h3>
+
+            <p class="category__description">
+              The most elegant witch hats you can wear and scare
+            </p>
+
+            <img
+              src="./assets/img/stars.png"
+              alt="category start image"
+              class="category__star"
+              width="250"
+              height="256"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
       <!--==================== ABOUT ====================-->
-      <section class="about section" id="about"></section>
+      <section class="about section" id="about">
+        <div class="shape__small"></div>
+        <div class="shape__big"></div>
+
+        <div class="about__container container grid" data-aos="zoom-in" data-aos-duration="2000">
+          <div class="about__data">
+            <h2 class="section__title">
+              About The Night <br />
+              Of Terror
+            </h2>
+
+            <p class="about__description">
+              Halloween is celebrated every October 31 at night, walk around the
+              city with your friends and trick or treat, enjoy this celebration
+              under the full moon.
+            </p>
+
+            <a href="#" class="button">Know More!!!</a>
+          </div>
+
+          <img
+            src="/assets/img/about-scare.png"
+            alt="about banner"
+            class="about__banner"
+            width="1000"
+            height="1087"
+            loading="lazy"
+          />
+        </div>
+      </section>
 
       <!--==================== ITEMS ====================-->
-      <section class="items section" id="items"></section>
+      <section class="items section" id="items">
+        <div class="shape__big"></div>
+
+        <h2 class="section__title" data-aos="zoom-out-right" data-aos-duration="2500">
+          Select your <br />
+          lost item
+        </h2>
+
+        <div class="items__container container grid" data-aos="zoom-out-left" data-aos-duration="2500" data-aos-delay="800">
+          <article class="items__card">
+            <img
+              src="/assets/img/item-apple.png"
+              alt="item 1 image"
+              class="items__img"
+              width="360"
+              height="302"
+              loading="lazy"
+            />
+
+            <h3 class="item__name">Candy Apple</h3>
+            <span class="item__price">$4.99</span>
+            <button class="items__button">
+              <i class="ri-heart-3-line"></i>
+            </button>
+          </article>
+
+          <article class="items__card">
+            <img
+              src="/assets/img/item-broom.png"
+              alt="item 1 image"
+              class="items__img"
+              width="360"
+              height="365"
+              loading="lazy"
+            />
+
+            <h3 class="item__name">Witch Broom</h3>
+            <span class="item__price">$12.99 </span>
+            <button class="items__button">
+              <i class="ri-heart-3-line"></i>
+            </button>
+          </article>
+
+          <article class="items__card">
+            <img
+              src="/assets/img/item-pumpkin.png"
+              alt="item 1 image"
+              class="items__img"
+              width="360"
+              height="318"
+              loading="lazy"
+            />
+
+            <h3 class="item__name">Pumpkin</h3>
+            <span class="item__price">$7.99 </span>
+            <button class="items__button">
+              <i class="ri-heart-3-line"></i>
+            </button>
+          </article>
+
+          <article class="items__card">
+            <img
+              src="/assets/img/item-spider.png"
+              alt="item 1 image"
+              class="items__img"
+              width="370"
+              height="298"
+              loading="lazy"
+            />
+
+            <h3 class="item__name">Spider</h3>
+            <span class="item__price">$9.99</span>
+            <button class="items__button">
+              <i class="ri-heart-3-line"></i>
+            </button>
+          </article>
+
+          <article class="items__card">
+            <img
+              src="/assets/img/item-witch-hat.png"
+              alt="item 1 image"
+              class="items__img"
+              width="360"
+              height="296"
+              loading="lazy"
+            />
+
+            <h3 class="item__name">Witch Hat</h3>
+            <span class="item__price">$15.99</span>
+            <button class="items__button">
+              <i class="ri-heart-3-line"></i>
+            </button>
+          </article>
+        </div>
+      </section>
 
       <!--==================== PARTY ====================-->
-      <section class="party section" id="party"></section>
+      <section class="party section" id="party">
+        <div class="party__container container grid">
+          <div class="party__data"  data-aos="fade-right" data-aos-duration="2500">
+            <h2 class="section__title">
+              Halloween <br />
+              party 31 October
+            </h2>
+
+            <p class="party__description">
+              Organize a great Halloween party and enjoy the creepiest night of
+              terror with all your friends.
+            </p>
+
+            <a href="#" class="button">Start The Party!!!</a>
+          </div>
+
+          <div class="party__images" data-aos="fade-left" data-aos-duration="2500" data-aos-delay="800">
+            <img
+              src="/assets/img/party-cauldron.png"
+              alt="party banner"
+              class="party__banner"
+              width="1000"
+              height="1012"
+              loading="lazy"
+            />
+
+            <img
+              src="/assets/img/stars.png"
+              alt="party stars"
+              class="party__stars-1"
+              width="250"
+              height="256"
+              loading="lazy"
+            />
+            <img
+              src="/assets/img/stars.png"
+              alt="party stars"
+              class="party__stars-2"
+              width="250"
+              height="256"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer section"></footer>
+    <footer class="footer section">
+      <div class="shape__small"></div>
+      <div class="shape__big"></div>
+
+      <div class="footer__container container grid">
+        <div data-aos="flip-down" data-aos-duration="2500">
+          <a href="#" class="footer__logo">
+            <img
+              src="./assets/img/logo-skull.png"
+              width="133"
+              height="169"
+              alt="footer logo"
+            />
+
+            Halloween
+          </a>
+
+          <p class="footer__description">
+            Enjoy the spookiest <br />
+            night of your life.
+          </p>
+        </div>
+
+        <div class="footer__content" data-aos="flip-down" data-aos-duration="2500">
+          <div>
+            <h3 class="footer__title">About Us</h3>
+
+            <ul class="footer__links">
+              <li>
+                <a href="#" class="footer__link">About Us</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer__link">Features</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer__link">News & Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Services</h3>
+
+            <ul class="footer__links">
+              <li>
+                <a href="#" class="footer__link">Pricing</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer__link">Discounts</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer__link">send a gift</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Company</h3>
+
+            <ul class="footer__links">
+              <li>
+                <a href="#" class="footer__link">Blogs</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer__link">celebrations</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer__link">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Social Media</h3>
+
+            <ul class="footer__social">
+              <a href="https://www.facebook.com/" class="footer__social-link">
+                <i class="ri-facebook-circle-fill"></i>
+              </a>
+              <a href="https://www.instagram.com/" class="footer__social-link">
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a href="https://twitter.com/" class="footer__social-link">
+                <i class="ri-twitter-fill"></i>
+              </a>
+            </ul>
+          </div>
+        </div>
+
+        <img
+          src="/assets/img/footer-tree1.png"
+          alt="footer tree"
+          class="footer__tree1"
+          width="770"
+          height="800"
+          loading="lazy"
+        />
+        <img
+          src="/assets/img/footer-tree2.png"
+          alt="footer tree"
+          class="footer__tree2"
+          width="800"
+          height="760"
+          loading="lazy"
+        />
+      </div>
+
+      <span class="footer__copy">
+        &copy; Copyright Judy Odiakose. All rights reserved
+      </span>
+    </footer>
 
     <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+    </a>
 
-    <!--=============== SCROLLREVEAL ===============-->
-    <script src=""></script>
-
+    <!--!=============== SCRIPTS ===============-->
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <!--=============== AOS JS ===============-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
